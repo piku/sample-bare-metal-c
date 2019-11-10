@@ -50,7 +50,7 @@ int main(int argc, char *argv[]) {
  
   listen(sock, 5);
 
-  printf("Server listening.\n");
+  fprintf(stderr, "Server listening.\n");
 
   while (1) {
     client_fd = accept(sock, (struct sockaddr *) &cli_addr, &sin_len);
