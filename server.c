@@ -30,6 +30,8 @@ int main(int argc, char *argv[]) {
   if (argc < 2 || *p != '\0' || port > 65536 || port == 0) {
     err(1, "Invalid port number");
   }
+  
+  fprintf(stderr, "Port: %d\n", port);
 
   int sock = socket(AF_INET, SOCK_STREAM, 0);
   if (sock < 0)
